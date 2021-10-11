@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #3f3752;
+}
+
+.container {
+   position: relative;
+   width: 1200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+.section {
+   position: relative;
+   width: 300px;
+   height: 300px;
+   background: #51446e;
+   border-radius: 20px;
+   overflow: hidden;
+}
+.icon {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--i);
+   transition: 0.5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 2;
+   transition-delay: 0.25s;
+}
+
+.icon ion-icon {
+   font-size: 5em;
+   color: #fff;
+   transition: 0.5s;
+   transition-delay: 0.25s;
+}
+
+.section:hover .icon ion-icon {
+   font-size: 2em;
+   transition-delay: 0s;
+}
+
+.section:hover .icon {
+   width: 80px;
+   height: 80px;
+   top: 30px;
+   left: calc(50% - 40px);
+   border-radius: 50%;
+   transition-delay: 0s;
+}
+.content {
+   position: relative;
+   padding: 20px;
+   color: #fff;
+   text-align: center;
+   margin: 120px 0px 0px 0px;
+   z-index: 1;
+   transform: scale(0);
+   transition: 0.5s;
+   transition-delay: 0s;
+}
+
+.section:hover .content {
+   transform: scale(1);
+   transition-delay: 0.25s;
+}
+
+.content h2 {
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+.content p {
+   font-weight: 300;
+   line-height: 1.3em;
+}
